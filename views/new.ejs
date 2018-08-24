@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+
+  <div class="container" style="text-align: center">
+    <div style="margin: 0 auto; width: 40%;">
+      <h1>Create new campsite</h1>
+      <form action="/campgrounds" method="POST">
+        <div>
+          <input style="width: 100%; margin: 3% 0;" type="text" name="name" placeholder="name" minlength="5">
+        </div>
+        <div>
+          <input style="width: 100%; margin: 3% 0;" type="text" name="photo" placeholder="Image url" minlength="15">
+        </div>
+
+        <button style="width: 100%; margin: 3% 0;" class="btn btn-success" style="width: 100%;">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div id="map" style="height: 30%;" onload="initMap();"></div>
+
+
+  <% include partials/footer %>

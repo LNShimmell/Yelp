@@ -1,0 +1,31 @@
+<% include partials/header %>
+
+  <header class="jumbotron" style="text-align: center">
+    <div class="container">
+      <h1>campsites</h1>
+      <p>View our hand-picked campground from all over the world</p>
+      <p>
+        <a class="btn btn-success" href="/campgrounds/new">Add New Campground</a>
+      </p>
+    </div>
+
+  </header>
+  <div class="container">
+
+    <% campsites.forEach((site)=>{%>
+
+      <div style="float: left;; margin: 3%;">
+
+        <img src="<%= site.photo %>" width="300px">
+
+        <h4 style="width: 300px">
+          <%= site.name %>
+        </h4>
+      </div>
+
+
+      <%})%>
+
+
+  </div>
+  <% include partials/footer %>
